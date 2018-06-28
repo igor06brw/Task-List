@@ -1,17 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-
+export class AppComponent implements OnInit {
 
   constructor() {}
 
   tasksList: Array<string> = [];
   tasksDone: Array<string> = [];
+
+  ngOnInit(): void {
+    this.tasksList = ['Sprzątanie kuwety', 'Odkurzanie', 'Nauka Angular', 'Zakupy'];
+  }
 
   add(task: string) {
     this.tasksList.push(task);
