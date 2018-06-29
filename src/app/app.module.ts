@@ -1,3 +1,4 @@
+import { TasksService } from './services/tasks.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -18,7 +19,7 @@ import { DoneTaskComponent } from './done-task/done-task.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [TasksService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
