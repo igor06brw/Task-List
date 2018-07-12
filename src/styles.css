@@ -5,3 +5,6 @@ li {
   background-color: lightgray;
   margin: 5px;
   }
+p:hover {
+  transition: all 0.3s 
+}
